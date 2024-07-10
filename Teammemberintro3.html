@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Ensures the container expands to fit its floated children */
+        }
+        .team-member {
+            margin-bottom: 20px;
+            overflow: hidden;
+            clear: both; /* Clears floats */
+        }
+        .team-member img {
+            float: left;
+            margin-right: 20px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 150px; /* Adjust image size */
+            height: 150px;
+        }
+        .team-member .bio {
+            overflow: hidden;
+        }
+        .navigation {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 10px;
+        }
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Team</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="team-member">
+            <img src="https://www.creativefabrica.com/wp-content/uploads/2023/04/16/Ryan-Reynolds-On-Tinder-67340186-1.png" alt="Ryan">
+            <div class="bio">
+                <h2>Ryan</h2>
+                <p>As our founder and visionary, Ryan brings a wealth of experience in entrepreneurship and technology.</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/73345f8a-bd63-4d72-bf71-951f97657e9c/dajlls9-321f802c-2eb9-45af-8284-9d3459293064.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzczMzQ1ZjhhLWJkNjMtNGQ3Mi1iZjcxLTk1MWY5NzY1N2U5Y1wvZGFqbGxzOS0zMjFmODAyYy0yZWI5LTQ1YWYtODI4NC05ZDM0NTkyOTMwNjQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.fXCWCLFtcM4nypqiioxrmKXkX08MRWn-hnEGsVwI-gg" alt="Hugh">
+            <div class="bio">
+                <h2>Hugh Jackman</h2>
+                <p>Hugh brings creativity and leadership to our design and marketing departments.</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="https://i.pinimg.com/originals/54/53/e3/5453e32acc7c50293e75a65ac8795dd8.jpg" alt="Phoenix">
+            <div class="bio">
+                <h2>Phoenix</h2>
+                <p>Phoenix is our software engineer, specializing in backend development and AI.</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9f8b74e0-0f8c-4edd-aa4a-b73fd90e2009/dh9njlr-d98f916f-5bba-4dab-b379-6b85f1c92d37.jpg/v1/fill/w_676,h_1183,q_70,strp/christian_bale_by_will3443_dh9njlr-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjI0MCIsInBhdGgiOiJcL2ZcLzlmOGI3NGUwLTBmOGMtNGVkZC1hYTRhLWI3M2ZkOTBlMjAwOVwvZGg5bmpsci1kOThmOTE2Zi01YmJhLTRkYWItYjM3OS02Yjg1ZjFjOTJkMzcuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.ctLv-LuymOUJWwIltDPecIFnT8AsnpPKv8EzSpPq6N8" alt="Chris">
+            <div class="bio">
+                <h2>Chris</h2>
+                <p>Chris is our project manager, ensuring smooth execution and delivery of our initiatives.</p>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
