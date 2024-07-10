@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Menus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 20px;
+        }
+        .menu {
+            width: 400px;
+            height: 550px;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .menu-content {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 100px;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 40px); /* Adjusting width to fit inside the menu */
+            box-sizing: border-box;
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu" style="background-image: url('https://www.spendwithpennies.com/wp-content/uploads/2021/04/SpendWithPennies-how-to-make-a-fried-egg-1.jpg');">
+        <div class="menu-content">
+            <h2>Breakfast Menu</h2>
+            <ul>
+                <li>Avocado Toast with Poached Eggs</li>
+                <li>Smoothie Bowl with Fresh Fruits</li>
+                <li>Greek Yogurt with Honey and Nuts</li>
+                <li>Green Tea</li>
+                <li>Fresh Orange Juice</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="menu" style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/peanut-chicken-protein-bowl-secondary-660719753499f.jpg?crop=0.6666666666666666xw:1xh;center,top&resize=980:*');">
+        <div class="menu-content">
+            <h2>Lunch Menu</h2>
+            <ul>
+                <li>Grilled Chicken Salad with Quinoa</li>
+                <li>Whole Wheat Wrap with Hummus and Veggies</li>
+                <li>Lentil Soup with Spinach</li>
+                <li>Herbal Iced Tea</li>
+                <li>Mixed Berry Smoothie</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="menu" style="background-image: url('https://www.cookingclassy.com/wp-content/uploads/2022/07/grilled-steak-15.jpg');">
+        <div class="menu-content">
+            <h2>Dinner Menu</h2>
+            <ul>
+                <li>Grilled Salmon with Asparagus</li>
+                <li>Sweet Potato and Black Bean Tacos</li>
+                <li>Steamed Broccoli with Garlic</li>
+                <li>Infused Water with Lemon and Mint</li>
+                <li>Chia Pudding with Almond Milk</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
