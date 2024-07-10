@@ -1,0 +1,35 @@
+/* Common styles for scorecards */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table.scorecard {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid #ccc;
+}
+
+table.scorecard caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+table.scorecard th, table.scorecard td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* Pseudo class example */
+table.scorecard tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
