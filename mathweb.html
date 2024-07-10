@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Math Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .test-section {
+            margin-bottom: 20px;
+        }
+        .question {
+            margin: 10px 0;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Start of the test -->
+    <h1>Math Test</h1>
+
+    <div class="test-section">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name">
+    </div>
+
+    <div class="test-section">
+        <h2>Multiple Choice Questions</h2>
+        <div class="question">
+            <p>1. What is 5 &times; 3?</p>
+            <input type="radio" id="q1a" name="q1" value="12">
+            <label for="q1a">12</label><br>
+            <input type="radio" id="q1b" name="q1" value="15">
+            <label for="q1b">15</label><br>
+            <input type="radio" id="q1c" name="q1" value="18">
+            <label for="q1c">18</label>
+        </div>
+
+        <div class="question">
+            <p>2. What is the square root of 64?</p>
+            <input type="radio" id="q2a" name="q2" value="6">
+            <label for="q2a">6</label><br>
+            <input type="radio" id="q2b" name="q2" value="8">
+            <label for="q2b">8</label><br>
+            <input type="radio" id="q2c" name="q2" value="10">
+            <label for="q2c">10</label>
+        </div>
+
+        <div class="question">
+            <p>3. What is the value of π (pi) approximately?</p>
+            <input type="radio" id="q3a" name="q3" value="3.14">
+            <label for="q3a">3.14</label><br>
+            <input type="radio" id="q3b" name="q3" value="2.71">
+            <label for="q3b">2.71</label><br>
+            <input type="radio" id="q3c" name="q3" value="1.62">
+            <label for="q3c">1.62</label>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Word Problem</h2>
+        <p>4. If a train travels at a constant speed of 60 km/h, how far will it travel in 3.5 hours? Show your work and provide the final answer.</p>
+        <textarea id="wordProblem" name="wordProblem"></textarea>
+    </div>
+
+    <div class="test-section">
+        <button type="submit">Submit</button>
+    </div>
+    <!-- End of the test -->
+</body>
+</html>
