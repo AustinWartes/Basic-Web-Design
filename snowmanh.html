@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowmen Puzzle</title>
+    <link rel="stylesheet" href="snowmanc.css">
+</head>
+<body>
+    <div class="puzzle-container" id="puzzleContainer">
+        <!-- Puzzle pieces will be added dynamically by JavaScript -->
+    </div>
+
+    <!-- Include JSZip library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+
+    <!-- Script to load images from zip file -->
+    <script>
+        // URL to your zip file
+        const zipUrl = 'path/to/4.4_puzzle2.zip';
+
+        // Initialize JSZip instance
+        const zip = new JSZip();
+
+        // Fetch the zip file
+        fetch(zipUrl)
+            .then(response => response.arrayBuffer())
+            .then(arrayBuffer => {
+                // Load the zip file
+                return zip.loadAsync(arrayBuffer);
+            })
+            .then(zipData => {
+                // Array of promises to retrieve image files
+                const promises = [];
+                zip.forEach((relativePath, zipEntry) => {
+                    // Check if it's a file and has image extension (adjust as needed)
+                    if (!zipEntry.dir && /\.(jpg|jpeg|png|gif)$/i.test(zipEntry.name)) {
+                        promises.push(
+                            // Extract file as Uint8Array
+                            zip.file(zipEntry.name).async('uint8array').then(data => {
+                                const blob = new Blob([data], { type: 'image/jpeg' });
+                                const imageUrl = URL.createObjectURL(blob);
+
+                                // Create puzzle piece div
+                                const puzzlePiece = document.createElement('div');
+                                puzzlePiece.className = 'puzzle-piece';
+                                puzzlePiece.style.backgroundImage = `url(${imageUrl})`;
+
+                                // Append puzzle piece to container
+                                document.getElementById('puzzleContainer').appendChild(puzzlePiece);
+                            })
+                        );
+                    }
+                });
+
+                // Resolve all promises
+                return Promise.all(promises);
+            })
+            .catch(error => {
+                console.error('Error loading zip file:', error);
+            });
+    </script>
+</body>
+</html>
