@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowmen Puzzle</title>
+    <link rel="stylesheet" href="snowmanc.css">
+</head>
+<body>
+    <div class="puzzle-container" id="puzzleContainer">
+        <!-- Puzzle pieces loaded dynamically from the 4.4_puzzle2 folder -->
+    </div>
+
+    <!-- Script to dynamically load puzzle pieces -->
+    <script>
+        // Array of image file names
+        const imageFiles = [
+            'puzzle2_A.jpg',
+            'puzzle2_B.jpg',
+            'puzzle2_C.jpg',
+            'puzzle2_D.jpg',
+            'puzzle2_H.jpg',
+            'puzzle2_I.jpg',
+            'puzzle2_J.jpg',
+            'puzzle2_K.jpg',
+            'puzzle2_L.jpg',
+            'puzzle2_M.jpg'
+            // Add more image file names as needed
+        ];
+
+        // Function to load puzzle pieces
+        function loadPuzzlePieces() {
+            const puzzleContainer = document.getElementById('puzzleContainer');
+
+            imageFiles.forEach(filename => {
+                const imageUrl = `images/4.4_puzzle2/${filename}`;
+
+                // Create puzzle piece div
+                const puzzlePiece = document.createElement('div');
+                puzzlePiece.className = 'puzzle-piece';
+                puzzlePiece.style.backgroundImage = `url(${imageUrl})`;
+
+                // Append puzzle piece to container
+                puzzleContainer.appendChild(puzzlePiece);
+            });
+        }
+
+        // Call the function to load puzzle pieces
+        window.onload = loadPuzzlePieces;
+    </script>
+</body>
+</html>
